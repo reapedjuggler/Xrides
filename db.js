@@ -11,7 +11,6 @@ const connection = new Pool({
     port: 5432,
 })
 
-
 /*
     We can also make two separate Tables for Users and Bookings, just in case to add authorization
 */
@@ -69,16 +68,14 @@ function addRide(
                         VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9,
                         $10, $11, $12, $13, $14, $15, $16, $17, $18)`
 
-    console.log(values, "  iam values\n\n")
+    // console.log(values, "  iam values\n\n")
 
     return new Promise((resolve, reject) => {
-        console.log("INside promise ")
+        // console.log("INside promise ")
         connection.query(insertText, values, (err, res) => {
             if (err) {
-                console.log(err, "\n\n\n", "Hello error");
                 return reject(err)
             } else {
-                console.log(res, "\n\n" + " hi iam response");
                 return resolve();
             }
         })

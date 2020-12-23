@@ -1,9 +1,9 @@
 const route = require('express').Router();
 const Ride = require('../../db');
 
-route.get('/api/rides', (req, res) => {
-    console.log("hello");
-    res.send(" Hey s0ber");
+route.get('/', (req, res) => {
+    console.log("arigato :D")
+    res.send("Hello Reaped");
 })
 
 route.post('/', (req, res, next) => {
@@ -30,7 +30,10 @@ route.post('/', (req, res, next) => {
         )
         .then(() => {
             console.log(" inside addRide in rides.js ")
-            res.send("Hello Juggler");
+            // res.send("Your Request has been accepted ");
+
+            res.redirect("/api/rides")
+
         })
         .catch((err) => {
             res.send("Sorry !")

@@ -18,7 +18,7 @@ $(function () {
     let fromLong = $('#fromLong');
     let toLat = $('#toLat');
     let toLong = $('#toLong');
-
+    
     $("#btn").click(function () {
             $.post('/api/rides', {
                 bookingId: bookingId.val(),
