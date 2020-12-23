@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Xrides Title Page</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" crossorigin="anonymous"></script>
+    <script src="addRide.js"></script>
+</head>
+
+<body>
+
+    <h1> Login Details </h1>
+
+    <div id="container">
+
+        <form align="left">
+
+            <label>Booking ID</label><br>
+            <input type="number" id="bookingId" required><br>
+
+            <label>User ID </label><br>
+            <input type="number" id="userId" placeholder="999329932" required><br>
+
+            <label> Vehicle Model </label><br>
+            <input type="number" id="vehicleId" required><br>
+
+            <label>Package ID</label><br>
+            <input type="number" id="packageId" required><br>
+
+            <label>Travel Type </label><br>
+            <select id="travelTypeId" name="travel" required>
+                <option value="1">Long Distance</option>
+                <option value="2">Point To Point</option>
+                <option value="3">Hourly Rental</option>
+            </select><br><br>
+
+            <label>Travel ID </label><br>
+            <select id="travelId" required>
+                <option value="1">4 hours and 40 Kms</option>
+                <option value="2">8 hours and 80 Kms</option>
+                <option value="3">6 hours and 60 Kms</option>
+                <option value="4">10 hours and 100 Kms</option>
+                <option value="5">5 hours and 50 Kms</option>
+                <option value="6">3 hours and 30 Kms</option>
+                <option value="7">12 hours and 120 Kms</option>
+            </select>
+            <br><br>
+
+            <label>Booking Platform</label><br>
+            <div id="radiobtn">
+                <input type="radio" id="mobileId">Mobile Website
+                <br>
+                <input type="radio" id="desktopId"> Desktop Website
+                <br><br>
+            </div>
+
+            <label>From Area ID</label><br>
+            <input type="number" id="fromAreaId" required><br>
+
+            <label>To Area ID</label><br>
+            <input type="number" id="toAreaId" required><br>
+
+            <label>From City ID</label><br>
+            <input type="number" id="fromId" required><br>
+
+            <label>Destination City ID</label><br>
+            <input type="number" id="destId" required><br>
+
+            <label>From Date</label><br>
+            <input type="date" id="begDate" required><br>
+
+            <label>To Date</label><br>
+            <input type="date" id="endDate" required><br>
+
+            <label>From Latitude</label><br>
+            <input type="float" id="fromLat" required><br>
+
+            <label>From Longitute</label><br>
+            <input type="float" id="fromLong" required><br>
+
+            <label>To Latitude</label><br>
+            <input type="float" id="toLat" required><br>
+
+            <label>To Longitute</label><br>
+            <input type="float" id="toLong" required><br>
+
+            <input type="submit" id="btn">
+
+        </form>
+    </div>
+
+</body>
+
+</html>
