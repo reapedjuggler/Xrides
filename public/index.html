@@ -9,8 +9,6 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.js" crossorigin="anonymous"></script>
-    <script src="addRide.js"></script>
 </head>
 
 <body>
@@ -19,29 +17,29 @@
 
     <div id="container">
 
-        <form align="left">
+        <form align="left" action = "/api/rides" method = "POST">
 
             <label>Booking ID</label><br>
-            <input type="number" id="bookingId" required><br>
+            <input type="number" name="bookingId" required><br>
 
             <label>User ID </label><br>
-            <input type="number" id="userId" placeholder="999329932" required><br>
+            <input type="number" name="userId" placeholder="999329932" required><br>
 
             <label> Vehicle Model </label><br>
-            <input type="number" id="vehicleId" required><br>
+            <input type="number" name="vehicleId" required><br>
 
             <label>Package ID</label><br>
-            <input type="number" id="packageId" required><br>
+            <input type="number" name="packageId" required><br>
 
             <label>Travel Type </label><br>
-            <select id="travelTypeId" name="travel" required>
+            <select name="travelTypeId" name="travel" required>
                 <option value="1">Long Distance</option>
                 <option value="2">Point To Point</option>
                 <option value="3">Hourly Rental</option>
             </select><br><br>
 
             <label>Travel ID </label><br>
-            <select id="travelId" required>
+            <select name="travelId" required>
                 <option value="1">4 hours and 40 Kms</option>
                 <option value="2">8 hours and 80 Kms</option>
                 <option value="3">6 hours and 60 Kms</option>
@@ -53,44 +51,44 @@
             <br><br>
 
             <label>Booking Platform</label><br>
-            <div id="radiobtn">
-                <input type="radio" id="mobileId">Mobile Website
+            <div name="radiobtn">
+                <input type="radio" name="mobileId">Mobile Website
                 <br>
-                <input type="radio" id="desktopId"> Desktop Website
+                <input type="radio" name="desktopId"> Desktop Website
                 <br><br>
             </div>
 
             <label>From Area ID</label><br>
-            <input type="number" id="fromAreaId" required><br>
+            <input type="number" name="fromAreaId" required><br>
 
             <label>To Area ID</label><br>
-            <input type="number" id="toAreaId" required><br>
+            <input type="number" name="toAreaId" required><br>
 
             <label>From City ID</label><br>
-            <input type="number" id="fromId" required><br>
+            <input type="number" name="fromId" required><br>
 
             <label>Destination City ID</label><br>
-            <input type="number" id="destId" required><br>
+            <input type="number" name="destId" required><br>
 
             <label>From Date</label><br>
-            <input type="date" id="begDate" required><br>
+            <input type="date" name="begDate" required><br>
 
             <label>To Date</label><br>
-            <input type="date" id="endDate" required><br>
+            <input type="date" name="endDate" required><br>
 
             <label>From Latitude</label><br>
-            <input type="float" id="fromLat" required><br>
+            <input type="float" name="fromLat" required><br>
 
             <label>From Longitute</label><br>
-            <input type="float" id="fromLong" required><br>
+            <input type="float" name="fromLong" required><br>
 
             <label>To Latitude</label><br>
-            <input type="float" id="toLat" required><br>
+            <input type="float" name="toLat" required><br>
 
             <label>To Longitute</label><br>
-            <input type="float" id="toLong" required><br>
+            <input type="float" name="toLong" required><br>
 
-            <input type="submit" id="btn">
+            <input type="submit" name="btn">
 
         </form>
     </div>

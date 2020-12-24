@@ -12,6 +12,7 @@ const connection = new Pool({
 })
 
 /*
+    Assuming a table named rides already exist, if not we can create easily create one
     We can also make two separate Tables for Users and Bookings, just in case to add authorization
 */
 
@@ -37,7 +38,7 @@ function addRide(
     toLong,
 ) {
 
-    // A List to send paramiterized Queries
+    // A List of values to send paramiterized Queries
     const values = [
         bookingId,
         userId,
@@ -59,20 +60,16 @@ function addRide(
         toLong
     ]
 
-    // Assuming a table named rides already exist
-
-    // console.log("Inside Addride\n\n\n")
-
+    // Required query which needs to be executed 
     const insertText = `INSERT INTO rides(bookingid, userid, vehicleid, packageid, traveltypeid, travelid, mobileid, 
                         desktopid, fromareaid, toareaid, fromid, destid, begdate, enddate, fromlat, fromlong, tolat, tolong) 
                         VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9,
                         $10, $11, $12, $13, $14, $15, $16, $17, $18)`
 
-    // console.log(values, "  iam values\n\n")
-
     return new Promise((resolve, reject) => {
-        // console.log("INside promise ")
+
         connection.query(insertText, values, (err, res) => {
+
             if (err) {
                 return reject(err)
             } else {
