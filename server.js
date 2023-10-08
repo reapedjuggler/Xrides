@@ -20,6 +20,6 @@ For the sake of deployment , also normalizePort is there to check for the validi
      const port = normalizePort(process.env.PORT || '3000');
 */
 
-server.listen(3000, (req, res, next) => {
+server.listen(3001, (req, res, next) => {
     console.log("Server started on port https://localhost:3000")
 });
